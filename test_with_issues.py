@@ -1,1 +1,3 @@
-password="123"
+a=1
+b=1
+print(a+b)
