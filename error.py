@@ -1,9 +1,6 @@
 import math
 import os
 import subprocess
-password = "root123"
-API_KEY = "ABC123XYZ"
-secret_token = "tok_9999"
 def ProcessData(data):
     total = 0
     if data != None:
