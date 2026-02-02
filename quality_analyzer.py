@@ -1,21 +1,24 @@
 # ==========================================
 # Rule-Based Code Quality Analyzer
-# Milestone-2
+# Milestone-2 | Corrected Final Version
 # ==========================================
 
 import ast
 import json
 import os
+import re
 import csv
+import sys
 
 # ------------------------------------------
-# 1. LIST OF PYTHON FILES TO ANALYZE
+# 1. FILES TO ANALYZE (Python files only)
 # ------------------------------------------
 files = [
-    "py.py"
+    "clean.py"
 ]
 
 file_summaries = []
+critical_found = False
 
 # ------------------------------------------
 # 2. ANALYZE EACH FILE
@@ -23,15 +26,18 @@ file_summaries = []
 for file_path in files:
 
     if not os.path.exists(file_path):
-        print(f"❌ File not found: {file_path}")
+        print(f"File not found: {file_path}")
         continue
 
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
         code = f.read()
 
     code_lower = code.lower()
     issues = []
 
+    # --------------------------------------
+    # PARSE CODE SAFELY
+    # --------------------------------------
     try:
         tree = ast.parse(code)
     except SyntaxError:
@@ -42,7 +48,7 @@ for file_path in files:
         tree = None
 
     # --------------------------------------
-    # 3. AST ANALYSIS & COMPLEXITY
+    # AST ANALYSIS & COMPLEXITY
     # --------------------------------------
     class CodeAnalyzer(ast.NodeVisitor):
         def __init__(self):
@@ -66,11 +72,13 @@ for file_path in files:
                     "issue": f"Missing docstring in function '{node.name}'",
                     "severity": "INFO"
                 })
+
             if len(node.args.args) > 5:
                 issues.append({
                     "issue": f"Function '{node.name}' has too many parameters",
                     "severity": "WARNING"
                 })
+
             self.generic_visit(node)
 
         def visit_ClassDef(self, node):
@@ -86,23 +94,20 @@ for file_path in files:
         analyzer.visit(tree)
 
     # --------------------------------------
-    # 4. SECURITY ISSUE DETECTION
+    # SECURITY ISSUE DETECTION (FIXED)
     # --------------------------------------
-    if "password" in code_lower:
-        issues.append({
-            "issue": "Hardcoded password detected",
-            "severity": "CRITICAL"
-        })
+    secret_patterns = [
+        r"password\s*=",
+        r"api_key\s*=",
+        r"apikey\s*=",
+        r"secret\s*=",
+        r"access_key\s*=",
+        r"token\s*="
+    ]
 
-    if "api_key" in code_lower or "apikey" in code_lower:
+    if any(re.search(p, code_lower) for p in secret_patterns):
         issues.append({
-            "issue": "Hardcoded API key detected",
-            "severity": "CRITICAL"
-        })
-
-    if any(x in code_lower for x in ["token", "secret", "access_key"]):
-        issues.append({
-            "issue": "Hardcoded secret or token detected",
+            "issue": "Hardcoded secret or credential detected",
             "severity": "CRITICAL"
         })
 
@@ -113,7 +118,7 @@ for file_path in files:
         })
 
     # --------------------------------------
-    # 5. COMPLEXITY WARNING
+    # COMPLEXITY WARNING
     # --------------------------------------
     if analyzer.complexity > 10:
         issues.append({
@@ -122,7 +127,7 @@ for file_path in files:
         })
 
     # --------------------------------------
-    # 6. QUALITY SCORE CALCULATION
+    # QUALITY SCORE
     # --------------------------------------
     def calculate_quality_score(issues):
         score = 100
@@ -138,7 +143,7 @@ for file_path in files:
     quality_score = calculate_quality_score(issues)
 
     # --------------------------------------
-    # 7. MAINTAINABILITY INDEX (MI)
+    # MAINTAINABILITY INDEX (MI)
     # --------------------------------------
     loc = len(code.splitlines())
 
@@ -148,7 +153,13 @@ for file_path in files:
     mi = calculate_mi(loc, analyzer.complexity)
 
     # --------------------------------------
-    # 8. FILE-LEVEL AGGREGATION
+    # CHECK CRITICAL ISSUES
+    # --------------------------------------
+    if any(i["severity"] == "CRITICAL" for i in issues):
+        critical_found = True
+
+    # --------------------------------------
+    # FILE SUMMARY
     # --------------------------------------
     file_summaries.append({
         "file": file_path,
@@ -160,7 +171,7 @@ for file_path in files:
     })
 
 # ------------------------------------------
-# 9. PROJECT-LEVEL AGGREGATION
+# PROJECT SUMMARY
 # ------------------------------------------
 project_summary = {
     "total_files": len(file_summaries),
@@ -173,7 +184,7 @@ project_summary = {
 }
 
 # ------------------------------------------
-# 10. REPORT GENERATION (JSON + CSV)
+# REPORT GENERATION
 # ------------------------------------------
 final_report = {
     "files": file_summaries,
@@ -194,27 +205,16 @@ with open("quality_report.csv", "w", newline="", encoding="utf-8") as f:
             summary["cyclomatic_complexity"],
             summary["issue_count"]
         ])
-# ------------------------------------------
-# 12. PRE-COMMIT DECISION LOGIC
-# ------------------------------------------
-critical_found = False
 
-for file in file_summaries:
-    for issue in file["issues"]:
-        if issue["severity"] == "CRITICAL":
-            critical_found = True
+# ------------------------------------------
+# FINAL RESULT FOR PRE-COMMIT
+# ------------------------------------------
+print("Code analysis completed")
+print("Reports generated: quality_report.json, quality_report.csv")
 
 if critical_found:
-    print("❌ Commit blocked: Critical issues detected")
-    exit(1)
+    print("Commit blocked: Critical issues detected")
+    sys.exit(1)
 else:
-    print("✅ No critical issues found. Commit allowed")
-    exit(0)
-
-
-# ------------------------------------------
-# 13. FINAL OUTPUT
-# ------------------------------------------
-print("✅ Code analysis completed successfully")
-print("📄 Reports generated: quality_report.json, quality_report.csv")
-print(f"📁 Files analyzed: {len(file_summaries)}")
+    print("No critical issues found. Commit allowed")
+    sys.exit(0)

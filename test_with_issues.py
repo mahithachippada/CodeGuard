@@ -1,3 +1,7 @@
-a=1
-b=1
-print(a+b)
+def add_numbers():
+    a = 5
+    b = 7
+    result = a + b
+    print("Sum is:", result)
+
+add_numbers()
