@@ -1,11 +1,11 @@
 {
     "files": [
         {
-            "file": "py.py",
+            "file": "error.py",
             "quality_score": 0,
             "maintainability_index": 0,
             "cyclomatic_complexity": 13,
-            "issue_count": 17,
+            "issue_count": 15,
             "issues": [
                 {
                     "issue": "Missing docstring in function 'ProcessData'",
@@ -56,15 +56,7 @@
                     "severity": "INFO"
                 },
                 {
-                    "issue": "Hardcoded password detected",
-                    "severity": "CRITICAL"
-                },
-                {
-                    "issue": "Hardcoded API key detected",
-                    "severity": "CRITICAL"
-                },
-                {
-                    "issue": "Hardcoded secret or token detected",
+                    "issue": "Hardcoded secret or credential detected",
                     "severity": "CRITICAL"
                 },
                 {

@@ -14,7 +14,12 @@ import sys
 # 1. FILES TO ANALYZE (Python files only)
 # ------------------------------------------
 files = [
-    "clean.py"
+    "error.py"
+]
+
+EXCLUDE_FILES = [
+    "quality_report.json",
+    "quality_report.csv"
 ]
 
 file_summaries = []
@@ -24,6 +29,10 @@ critical_found = False
 # 2. ANALYZE EACH FILE
 # ------------------------------------------
 for file_path in files:
+
+    filename = os.path.basename(file_path)
+    if filename in EXCLUDE_FILES:
+        continue
 
     if not os.path.exists(file_path):
         print(f"File not found: {file_path}")
@@ -94,7 +103,7 @@ for file_path in files:
         analyzer.visit(tree)
 
     # --------------------------------------
-    # SECURITY ISSUE DETECTION (FIXED)
+    # SECURITY ISSUE DETECTION
     # --------------------------------------
     secret_patterns = [
         r"password\s*=",
