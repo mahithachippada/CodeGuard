@@ -1,22 +1,36 @@
+# -*- coding: utf-8 -*-
 # ==========================================
+# CodeGuard CLI
 # Module 4: CLI & Configuration
-# ==========================================
-# - Command-line interface for CodeGuard
-# - Commands: scan, review, report, apply, diff
-# - Reads config from pyproject.toml
+# + Quality Gate Enforcement (Module 5)
 # ==========================================
 
 import argparse
 import os
 import sys
+import json
+
+# ------------------------------------------
+# TOML CONFIG LOADING (Python 3.8+ safe)
+# ------------------------------------------
 try:
     import tomllib  # Python 3.11+
 except ModuleNotFoundError:
     import tomli as tomllib  # Python < 3.11
-  # Python 3.11+
+
 
 # ------------------------------------------
-# CONFIG LOADING
+# SEVERITY RANKING
+# ------------------------------------------
+SEVERITY_ORDER = {
+    "CRITICAL": 3,
+    "WARNING": 2,
+    "INFO": 1
+}
+
+
+# ------------------------------------------
+# LOAD CONFIG FROM pyproject.toml
 # ------------------------------------------
 def load_config():
     config = {
@@ -34,47 +48,60 @@ def load_config():
 
 
 # ------------------------------------------
-# SEVERITY COMPARISON
+# QUALITY GATE CHECK
 # ------------------------------------------
-SEVERITY_ORDER = {
-    "CRITICAL": 3,
-    "WARNING": 2,
-    "INFO": 1
-}
+def should_block_commit(report_file, threshold):
+    if not os.path.exists(report_file):
+        return False
 
-def severity_exceeded(issue_severity, threshold):
-    return SEVERITY_ORDER[issue_severity] >= SEVERITY_ORDER[threshold]
+    with open(report_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    for file_report in data:
+        for issue in file_report.get("issues", []):
+            if SEVERITY_ORDER[issue["severity"]] >= SEVERITY_ORDER[threshold]:
+                return True
+
+    return False
 
 
 # ------------------------------------------
-# COMMAND HANDLERS
+# COMMAND IMPLEMENTATIONS
 # ------------------------------------------
 def run_scan(config):
-    print("🔍 Running static analysis (Module 1)...")
+    print("[SCAN] Running static analysis (Module 1)...")
     os.system("module1.py")
-    print("✅ Scan completed")
+
+    report_file = "module1_report.json"
+    threshold = config["severity_threshold"]
+
+    if should_block_commit(report_file, threshold):
+        print("[ERROR] Quality gate failed.")
+        print(f"[ERROR] Issues exceed severity threshold: {threshold}")
+        sys.exit(1)
+
+    print("[OK] Scan completed. Quality gate passed.")
 
 
-def run_review(config):
-    print("🤖 Running AI review (Module 2)...")
+def run_review(_config):
+    print("[REVIEW] Running AI review (Module 2)...")
     os.system("module2.py")
-    print("✅ Review completed")
+    print("[OK] Review completed.")
 
 
-def run_report(config):
-    print("📊 Generating validation metrics (Module 3)...")
+def run_report(_config):
+    print("[REPORT] Generating validation metrics (Module 3)...")
     os.system("module3.py")
-    print("✅ Report generated")
+    print("[OK] Report generated.")
 
 
-def run_apply(config):
-    print("🛠️ Auto-fix is currently limited to safe fixes")
-    print("ℹ️ (Feature placeholder for future extension)")
+def run_apply(_config):
+    print("[APPLY] Auto-fix feature is a placeholder.")
+    print("[INFO] Only safe fixes will be supported in future.")
 
 
-def run_diff(config):
-    print("📄 Diff view not implemented yet")
-    print("ℹ️ (Placeholder command)")
+def run_diff(_config):
+    print("[DIFF] Diff view feature is a placeholder.")
 
 
 # ------------------------------------------
@@ -82,7 +109,7 @@ def run_diff(config):
 # ------------------------------------------
 def main():
     parser = argparse.ArgumentParser(
-        description="CodeGuard – AI-assisted Code Review Tool"
+        description="CodeGuard - AI-assisted Code Review Tool"
     )
 
     parser.add_argument(
@@ -94,7 +121,7 @@ def main():
     args = parser.parse_args()
     config = load_config()
 
-    print("⚙️ Configuration loaded:")
+    print("Configuration loaded:")
     print(config)
     print("-" * 40)
 

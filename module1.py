@@ -12,7 +12,7 @@ import csv
 # ------------------------------------------
 files = [
     
-    "error.py"
+    "clean.py"
 ]
 
 # ------------------------------------------
@@ -224,5 +224,5 @@ with open("module1_report.csv", "w", newline="", encoding="utf-8") as f:
             critical
         ])
 
-print("✅ Module 1 analysis completed")
-print("📄 Reports generated: module1_report.json, module1_report.csv")
+print(" Module 1 analysis completed")
+print("Reports generated: module1_report.json, module1_report.csv")

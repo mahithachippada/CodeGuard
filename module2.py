@@ -143,7 +143,7 @@ def explain_issue(issue):
 # ------------------------------------------
 def run_ai_review_engine():
     if not os.path.exists(MODULE1_INPUT_FILE):
-        print(f"❌ Input file not found: {MODULE1_INPUT_FILE}")
+        print(f" Input file not found: {MODULE1_INPUT_FILE}")
         return
 
     with open(MODULE1_INPUT_FILE, "r", encoding="utf-8") as f:
@@ -187,8 +187,8 @@ def run_ai_review_engine():
     with open(MODULE2_OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final_reviews, f, indent=4)
 
-    print("✅ Module 2 AI Review completed")
-    print(f"📄 Output saved to: {MODULE2_OUTPUT_FILE}")
+    print(" Module 2 AI Review completed")
+    print(f" Output saved to: {MODULE2_OUTPUT_FILE}")
 
 # ------------------------------------------
 # AUTO-RUN (IMPORTANT PART YOU ASKED FOR)

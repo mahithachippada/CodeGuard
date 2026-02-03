@@ -57,7 +57,7 @@ def calculate_maintainability_index(loc, complexity):
 def run_metrics_engine():
 
     if not os.path.exists(MODULE1_REPORT):
-        print("❌ module1_report.json not found")
+        print(" module1_report.json not found")
         return
 
     with open(MODULE1_REPORT, "r", encoding="utf-8") as f:
@@ -136,8 +136,8 @@ def run_metrics_engine():
                 m["avg_function_complexity"]
             ])
 
-    print("✅ Module 3 metrics generated successfully")
-    print(f"📄 Reports: {OUTPUT_JSON}, {OUTPUT_CSV}")
+    print(" Module 3 metrics generated successfully")
+    print(f" Reports: {OUTPUT_JSON}, {OUTPUT_CSV}")
 
 
 # ------------------------------------------
