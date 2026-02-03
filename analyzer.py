@@ -145,10 +145,10 @@ def scan(files):
     print("Scan completed. Report saved to quality_report.json")
 
     if critical_found:
-        print("❌ Critical issues found")
+        print(" Critical issues found")
         sys.exit(1)
     else:
-        print("✅ No critical issues")
+        print(" No critical issues")
         sys.exit(0)
 
 

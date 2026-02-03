@@ -1,75 +1,8 @@
-[
-    {
-        "file": "error.py",
-        "quality_score": 0,
-        "maintainability_index": 0,
-        "cyclomatic_complexity": 13,
-        "issue_count": 16,
-        "issues": [
-            {
-                "issue": "Missing docstring in function 'ProcessData'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'calculate'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'complex_function'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'unsafe_execution'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'unsafe_system_call'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'run_shell'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'unused_function'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'long_function'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Class 'dataProcessor' should use PascalCase",
-                "severity": "WARNING"
-            },
-            {
-                "issue": "Missing docstring in function '__init__'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'updateValue'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Missing docstring in function 'process'",
-                "severity": "INFO"
-            },
-            {
-                "issue": "Hardcoded password detected",
-                "severity": "CRITICAL"
-            },
-            {
-                "issue": "Hardcoded api_key detected",
-                "severity": "CRITICAL"
-            },
-            {
-                "issue": "Hardcoded token detected",
-                "severity": "CRITICAL"
-            },
-            {
-                "issue": "Unsafe eval/exec usage",
-                "severity": "CRITICAL"
-            }
-        ]
+{
+    "files": [],
+    "project_summary": {
+        "total_files": 0,
+        "project_quality_score": 0,
+        "project_maintainability_index": 0
     }
-]
+}

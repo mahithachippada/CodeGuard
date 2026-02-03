@@ -1,0 +1,19 @@
+{
+    "files": [
+        {
+            "file": "error.py",
+            "lines_of_code": 104,
+            "issue_count": 28,
+            "quality_score": 0,
+            "maintainability_index": 0,
+            "total_complexity": 23,
+            "max_function_complexity": 7,
+            "avg_function_complexity": 2.09
+        }
+    ],
+    "project_summary": {
+        "total_files": 1,
+        "average_quality_score": 0.0,
+        "average_maintainability_index": 0.0
+    }
+}

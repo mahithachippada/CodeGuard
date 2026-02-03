@@ -1,0 +1,3 @@
+[tool.codeguard]
+severity_threshold = "WARNING"
+exclude_paths = ["venv", "tests"]
