@@ -2,8 +2,8 @@
     "files": [
         {
             "file": "error.py",
-            "lines_of_code": 104,
-            "issue_count": 28,
+            "lines_of_code": 101,
+            "issue_count": 24,
             "quality_score": 0,
             "maintainability_index": 0,
             "total_complexity": 23,
