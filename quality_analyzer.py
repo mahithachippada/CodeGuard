@@ -14,7 +14,7 @@ import sys
 # 1. FILES TO ANALYZE (Python files only)
 # ------------------------------------------
 files = [
-    "error.py"
+    "clean.py"
 ]
 
 EXCLUDE_FILES = [
