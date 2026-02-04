@@ -1,19 +1,2675 @@
 {
-    "files": [
-        {
-            "file": "error.py",
-            "lines_of_code": 101,
-            "issue_count": 24,
-            "quality_score": 0,
-            "maintainability_index": 0,
-            "total_complexity": 23,
-            "max_function_complexity": 7,
-            "avg_function_complexity": 2.09
-        }
-    ],
-    "project_summary": {
-        "total_files": 1,
-        "average_quality_score": 0.0,
-        "average_maintainability_index": 0.0
+  "files": [
+    {
+      "file": ".\\analyzer.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 27,
+      "issue_count": 26,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 22
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\c++code.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\clean.py",
+      "quality_score": 95,
+      "cyclomatic_complexity": 1,
+      "issue_count": 1,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 1
+      },
+      "maintainability_index": 93,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.py",
+      "quality_score": 30,
+      "cyclomatic_complexity": 23,
+      "issue_count": 13,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 12
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\error.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 14,
+      "issue_count": 25,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 2,
+        "INFO": 22
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\javacode.py",
+      "quality_score": 80,
+      "cyclomatic_complexity": 0,
+      "issue_count": 1,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 90,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\module1.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 14,
+      "issue_count": 20,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 16
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\module1_report.csv",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\module1_report.json",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\module3_metrics.csv",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\pyproject.toml",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\quality_analyzer.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 22,
+      "issue_count": 19,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 1,
+        "INFO": 16
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\scriptcode.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\streamlit_app.py",
+      "quality_score": 90,
+      "cyclomatic_complexity": 27,
+      "issue_count": 1,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 0
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\.git\\COMMIT_EDITMSG",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\config",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\description",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\FETCH_HEAD",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\HEAD",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\index",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\ORIG_HEAD",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\applypatch-msg.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\commit-msg.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\fsmonitor-watchman.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\post-update.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-applypatch.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-commit",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-commit.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-merge-commit.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-push.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-rebase.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\pre-receive.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\prepare-commit-msg.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\push-to-checkout.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\sendemail-validate.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\hooks\\update.sample",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\info\\exclude",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\logs\\HEAD",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\logs\\refs\\heads\\main",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\logs\\refs\\remotes\\origin\\main",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\00\\5f9374fc84695522b90abc526c2ccac19d2458",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\00\\84cf34075f819074d3de8a210b6c5332873192",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\01\\017e810fa20f6735b257c4299acfb37b23fe7e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\03\\09bb6e71e71e572e9f45916b6f0cd0bf41edf5",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\04\\0bd588e3f5fc70723e186e5a209ae1dcf2f3b9",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\05\\8701f96605f3c20944a009f1ca1b208aa8a161",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\05\\883f1e6d73f222ccaaac9c0e329f0c604a7555",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\0a\\872774d6896e3d10130ebed48cbcde8f917df8",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\0a\\f7c36fb29f26a14d7f80fd5d20460a4d0d89c7",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\0b\\5a7cf7dfdba8b612ec6f88ac818754b4e277e9",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\0e\\aacdaede676b3462a94dfa988ba93e2d4af45b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\0f\\37e7b4b39a83f2993a5153fb55cb5aea8d30e8",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\15\\a4ca25090cf68cb8dad12b3edf0159ad13d33b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\16\\1220d095c34c67febedaf7a982d1cadb976373",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\1a\\172fb28c404a27f421711f3a227319b6bfc01a",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\1a\\345981cf19cf6e12c66f5950da213408ace973",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\1d\\4696c52dc3acf27f9c7910194e00f68835b759",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\1d\\cdf0f0a0ddeb09fa59ca4336b44d297fad1179",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\22\\e34e410eac061835caa75c38b60e194b570934",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\23\\8907ef5509d1c47cf251b96b939e470dcb433e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\24\\57190a505781592a2b0f30d70ffa162f71477e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\26\\a1b187f6f1af19ce7277503bf55a5e07b7965e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\27\\8b578151431e13e0180213d82bcfa2f74fb9eb",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\28\\bac966eae489b812e754958951bb2b924876d0",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\2a\\1c34016ccdd8a4a01d4819d3f25c933eaa0297",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\2b\\c9c5428e32d03c8cc9e7e5ae5da475f3162352",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\2e\\0a373212bb5eb61ffd25f6bf7f3edd90c0fa68",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\30\\81b2156486ba7ec668a5ada063b64acbfaa340",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\31\\dfdf7d9aebe80f713e78764ca9c304432b6648",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\37\\e5c5b892be4607f95cdfc43abada6570b20e91",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\3a\\7fad30dd73d6d14678d17e9093c24179e4dab5",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\3b\\f1326de48153c5578e1bf2597236731c88f73c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\3f\\2f0cfbfe4227c0be8e44c6d2b2298346d3a53b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\47\\d2bd8733a6047e7a902b7401edb6c325864a59",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\47\\ecc446c785207357a419e78c894183adcd6127",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\4d\\55f1d39c47fb78dc3c259be2010653dab65feb",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\4d\\7cd570f3293a82133e54ec523f68a10e0d75d3",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\4e\\e901f012d69a48d845ff7d2e8adec8a388b83d",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\50\\363061dc4d4e40d6c1a087a93109203d05119f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\50\\771fadec9799005c43f220a168175e4567686e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\52\\0946fb23fb44c56210d36ff9535aaab27bda8b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\54\\0eec065249c8b1f6831bcd49f76003def632b5",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\55\\2ac1aaf91bd397545e537b110e9fff91e36fd9",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\55\\f99e87a9439bb1cd3f2f5ea07c519561c170ed",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\57\\9eef634100a3f8def646b479245ef563497ade",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\58\\fd8991d774296a7b2aead5e9daadbe4a883116",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\59\\24d5a4c4e8579df7d2aaac22676adca4e1f54c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\60\\1a089dbb9775fac794b22e38b12261703a7167",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\63\\7457c99f9f554fccdb6695b6bc841b47046064",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\63\\e194a1de46fa82cc8d439ea38312d39e0325d2",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\64\\351f494dc64bb45b09c2b5f7a81124ecb28538",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\67\\80e8b83c486c847f08acddd8a02bc3a317dcac",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\69\\2351641824e27ec5a882122b90d708fdb156b0",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\6a\\bb8469de50c41698f5f653c18a24bcd744fa26",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\6b\\2a900167eae80523587ad627dbf54549307765",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\6f\\36c6a39ecfb8ec339d6496f6854ba760e6bc8f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\71\\db4bec68f0a860ea4f0f666dff50cad9901e7a",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\72\\546781f0c610d5bd6e29c37970cc6af72acafb",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\73\\7a4ac445cd2b946bc9b5606649db17a98a5a18",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\74\\480aa23613069872c0308fdaf30428c1806689",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\76\\78fc1f1e908a27ea30e4b3f079726d77fd6ed9",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\77\\7fa036a4317116617accfad30f8da4d489b55b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\77\\c1bca2079ce47ec5f0d372c4923165fddf2dda",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\78\\3cdeb1ce223b960b88458a68e881e695f6b6b1",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\78\\7e4e2a18e1d4accc53981dd73f77426d86833f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\7f\\9dd28302d95751f2225b98346ca70d15f82349",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\81\\6101d0abefa3361dcc478ba420763be5d69b28",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\81\\6189af62dfb2edf777d832cb21e06b6ad19f17",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\87\\0ca46593d4e9217bb7b8d4b18cdcea62792c7e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\87\\5d600bab24c4d3a67e9b046121a363ce779d28",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\87\\999508dbe6080252c5a792bb6c70b2b67a8f4e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\88\\99a9d14de1b89da832d1c051c9f6d64078b2ca",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\89\\2cc09bf060c715f63bb31c7745c4f875359aee",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\8d\\26e1ccec11be82ace2be71b7143f241207b14e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\93\\3410feddca96e9a1b00932adff05376fb15cab",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\95\\ea6f8f83c38b7477829cd0e105fbf10c7c98c4",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\96\\d39c7ee547ce039a03b83b3fb655a1f8467294",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\99\\694bd973cd5264b2cc28f547fb103d01c27221",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\9d\\f797b5ad032abd01a7915f574bd6a5153accee",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a4\\03cbb79b3c65a804d9e32acd5461bfd425a8af",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a6\\78cad710d5af4ef349181696dde380e1230e14",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a8\\1d69bebacaff2f71ade0123049c34652905413",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a8\\30078163949620d99171475828995b8ccbd4b5",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a8\\f9b8e4424930080f7e95422d182b00224024dd",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\a9\\ae08e835b7826be49cc49223c72a971e58aeed",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\ab\\5c6de8bb749c6e9965b4100e44d07c6f88482c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\b6\\ab08090d5d3ba883a728f52acf11dd7ac2e8dc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\b7\\9869067e02d1778c469b219983a1f9304965ee",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\bb\\04ff9efcea23afa97bead54397ba9ab2c6704b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\bb\\ae67c6ff2f581f5d8099fc329d3ec67497d7e2",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\bd\\1c5861442ed0d4d9c1d09be6f49b30a3472f0f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\bd\\b731a7bf64b690b42be343329f7f83d09210d5",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\bf\\6a1d097b1cabfc2743fc60d42a1f005a34ea43",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c1\\615233c3dfb59f18432919ca4c8057ceab2eef",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c2\\44a29e80bdb46276f5f4db2c91939a4d150898",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c2\\fb223a66c3648b4b3c47b9e7a149db7175d19d",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c3\\df3079c9716ec5494371c3dc9664408507533c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c5\\490ad20335782db03a1065567e3dc812b8ecff",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\c9\\c9f3cee98460845f8eb7918de827c38a81895a",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\cd\\8955447cef768045d7707f71e90a02a08d9aed",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\d1\\0b27cfc16c17e63dcc38517555d51c520c7e33",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\d8\\01fdff70191eb77f3ae0ea296316792ab16818",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\d8\\d6444ba746e7653690c47502bd1e2cf71b600f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\d9\\538d0c7451e47f72809046caf7306e81941dfb",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\d9\\9b2da5d05a52995b9d94e09cfa629b1940c25c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\dc\\7a8620665b8116d70e581e7b09a56db281bdd1",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\dc\\8bc12e4888737b43a5a904310ae6253dc42f68",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\dc\\a0c780f3fb49e372175459b7680747769ae6b2",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\dc\\c1908f3224eb26ffe4aef902a61479c2fcdcfb",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e2\\698243568bd6b72edfbff10b72b69796cc0775",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e2\\a2eb668f02eba0e7c144c5e81bb2c8e24b117e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e2\\e5bab664a8eaa5156e2b49afb21dc97386d953",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e3\\64cfb79c3a1a6b20e0c436c9d5d95b9766fe9b",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e6\\71f960bb2eab2c11e5c401bfcbdb4cbbbf239e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\e7\\eb883a8762941c28b167ecd2acd9f4a07c4932",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\ea\\8cc2a394e9b8791d935d7f0570cbd8969915f1",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\ee\\da7cba6c1345c532e5a2e6914b561d291e2c1f",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\ef\\36f05936025a9f710d8c0a0bf7924e6dd8a0a3",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\f5\\e33ea51816afc03dd04470419112f30e9782a9",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\f9\\1e467251dc5c3381d73cee03f208a89db117b4",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\fb\\e360343b424af030466c29226ecab64b7b66a1",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\fb\\fd0757ce3c29853a572bb077a040d212894b5c",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\fc\\0c958c476fdc08642dacb05c9915205a248c7e",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\objects\\fc\\6e1dd73e6c4354f3d170662a04f9c039f3043a",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\refs\\heads\\main",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.git\\refs\\remotes\\origin\\main",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\.github\\workflows\\codeguard.yml",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\cpp_analyzer.py",
+      "quality_score": 90,
+      "cyclomatic_complexity": 5,
+      "issue_count": 2,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 71,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\c_analyzer.py",
+      "quality_score": 90,
+      "cyclomatic_complexity": 5,
+      "issue_count": 2,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 71,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\javascript_analyzer.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 61,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\java_analyzer.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 61,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\python_analyzer.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 14,
+      "issue_count": 20,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 16
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\analyzers\\__init__.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\cpp_analyzer.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\c_analyzer.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\javascript_analyzer.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\java_analyzer.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\python_analyzer.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\analyzers\\__pycache__\\__init__.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\cpp_analyzer.py",
+      "quality_score": 90,
+      "cyclomatic_complexity": 5,
+      "issue_count": 2,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 71,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\c_analyzer.py",
+      "quality_score": 90,
+      "cyclomatic_complexity": 5,
+      "issue_count": 2,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 71,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\javascript_analyzer.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 61,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\java_analyzer.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 2
+      },
+      "maintainability_index": 61,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\python_analyzer.py",
+      "quality_score": 0,
+      "cyclomatic_complexity": 14,
+      "issue_count": 20,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 16
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\build\\lib\\analyzers\\__init__.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\codeguard\\dispatcher.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 11,
+      "issue_count": 5,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 4
+      },
+      "maintainability_index": 32,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\build\\lib\\codeguard\\module2.py",
+      "quality_score": 5,
+      "cyclomatic_complexity": 20,
+      "issue_count": 11,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 7
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\build\\lib\\codeguard\\module3.py",
+      "quality_score": 80,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 2
+      },
+      "maintainability_index": 66,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\codeguard\\__init__.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\build\\lib\\codeguard\\__main__.py",
+      "quality_score": 30,
+      "cyclomatic_complexity": 24,
+      "issue_count": 13,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 12
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\codeguard\\dispatcher.py",
+      "quality_score": 70,
+      "cyclomatic_complexity": 11,
+      "issue_count": 5,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 4
+      },
+      "maintainability_index": 32,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\codeguard\\module2.py",
+      "quality_score": 5,
+      "cyclomatic_complexity": 20,
+      "issue_count": 11,
+      "severity_breakdown": {
+        "CRITICAL": 2,
+        "WARNING": 2,
+        "INFO": 7
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\codeguard\\module3.py",
+      "quality_score": 80,
+      "cyclomatic_complexity": 5,
+      "issue_count": 3,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 2
+      },
+      "maintainability_index": 66,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard\\__init__.py",
+      "quality_score": 100,
+      "cyclomatic_complexity": 1,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 95,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard\\__main__.py",
+      "quality_score": 30,
+      "cyclomatic_complexity": 24,
+      "issue_count": 13,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 12
+      },
+      "maintainability_index": 0,
+      "passed_quality_gate": false
+    },
+    {
+      "file": ".\\codeguard.egg-info\\dependency_links.txt",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.egg-info\\entry_points.txt",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.egg-info\\PKG-INFO",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.egg-info\\requires.txt",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.egg-info\\SOURCES.txt",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\codeguard.egg-info\\top_level.txt",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\__pycache__\\dispatcher.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\__pycache__\\module1.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\__pycache__\\module2.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
+    },
+    {
+      "file": ".\\__pycache__\\module3.cpython-310.pyc",
+      "quality_score": 100,
+      "cyclomatic_complexity": 0,
+      "issue_count": 0,
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "maintainability_index": 100,
+      "passed_quality_gate": true
     }
+  ],
+  "summary": {
+    "average_quality_score": 93.68,
+    "total_issues": 230,
+    "files_analyzed": 205,
+    "compliance_rate": 93.17
+  }
 }

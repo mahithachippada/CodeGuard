@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+altair
+pyarrow
+protobuf
+gitpython
+watchdog
+click
+toml

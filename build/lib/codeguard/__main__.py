@@ -2,9 +2,11 @@ import argparse
 import os
 import sys
 import json
-from dispatcher import analyze_file
-from module2 import generate_ai_review
-from module3 import compute_metrics
+
+from codeguard.dispatcher import analyze_file
+from codeguard.module2 import generate_ai_review
+from codeguard.module3 import compute_metrics
+
 
 SEVERITY_ORDER = {"CRITICAL": 3, "WARNING": 2, "INFO": 1}
 
@@ -38,12 +40,17 @@ def run_scan(config, target):
     with open("module1_report.json", "w", encoding="utf-8") as out:
         json.dump(results, out, indent=2)
 
+    # Always save last_results.json
+    with open("last_results.json", "w", encoding="utf-8") as out:
+        json.dump(results, out, indent=2)
+
     if should_block(results, config["severity_threshold"]):
         print("[ERROR] Quality gate failed")
         sys.exit(1)
 
     print("[OK] Scan passed")
     return results
+
 
 def run_review(results, use_llm=False):
     ai_reviews = generate_ai_review(results, use_llm=use_llm)

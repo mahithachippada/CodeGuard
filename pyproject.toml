@@ -1,3 +1,31 @@
+[project]
+name = "codeguard"
+version = "0.1.0"
+description = "AI-Powered Multi-Language Code Review Tool"
+authors = [{ name = "Mahitha" }]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "altair",
+    "pyarrow",
+    "protobuf",
+    "gitpython",
+    "watchdog",
+    "click",
+    "toml"
+]
+
+[project.scripts]
+codeguard = "codeguard.__main__:main"
+
 [tool.codeguard]
 severity_threshold = "WARNING"
 exclude_paths = ["venv", "tests"]
+
+[tool.setuptools]
+packages = ["codeguard", "analyzers"]
+include-package-data = true

@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: codeguard
+Version: 0.1.0
+Summary: AI-Powered Multi-Language Code Review Tool
+Author: Mahitha
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: altair
+Requires-Dist: pyarrow
+Requires-Dist: protobuf
+Requires-Dist: gitpython
+Requires-Dist: watchdog
+Requires-Dist: click
+Requires-Dist: toml
