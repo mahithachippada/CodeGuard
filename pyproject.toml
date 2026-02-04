@@ -24,7 +24,7 @@ codeguard = "codeguard.__main__:main"
 
 [tool.codeguard]
 severity_threshold = "WARNING"
-exclude_paths = ["venv", "tests"]
+exclude_paths = ["venv", "tests", "codeguard.egg-info", "build", "dist"]
 
 [tool.setuptools]
 packages = ["codeguard", "analyzers"]

@@ -1,0 +1,16 @@
+stages:
+  - quality
+
+codeguard_quality:
+  stage: quality
+  image: python:3.10
+  script:
+    - pip install .
+    - codeguard scan .
+    - codeguard review --llm || true
+    - codeguard report || true
+  artifacts:
+    paths:
+      - module1_report.json
+      - ai_review.json
+      - module3_metrics.json

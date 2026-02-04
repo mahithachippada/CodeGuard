@@ -440,6 +440,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\last_results.json",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\module1.py",
     "language": "python",
     "issues": [
@@ -580,7 +586,19 @@
     "complexity": 0
   },
   {
+    "file": ".\\module2.json",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\module3_metrics.csv",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\module3_metrics.json",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -915,7 +933,25 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\03\\698867727b844d07b4e4dfbc399e324988dd00",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\03\\eca2cebbe202a485abc70202fd1552e5c093ee",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\04\\0bd588e3f5fc70723e186e5a209ae1dcf2f3b9",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\04\\e5a7e6d3e15a437464c631567662ea9b4a21ad",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -928,6 +964,12 @@
   },
   {
     "file": ".\\.git\\objects\\05\\883f1e6d73f222ccaaac9c0e329f0c604a7555",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\06\\77170a51e0517451ae7b736d8882efa76776c7",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -951,6 +993,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\0c\\9955f12fa8f09a26fd2b1b3b67408934d85ccb",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\0e\\aacdaede676b3462a94dfa988ba93e2d4af45b",
     "language": "unknown",
     "issues": [],
@@ -963,7 +1011,19 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\13\\77ad933f8cbc1ec428427ca2d8c60d23ab32c3",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\15\\a4ca25090cf68cb8dad12b3edf0159ad13d33b",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\15\\ec9958d7b495ffee6e5f8bb6d458146fb3bedc",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -987,6 +1047,18 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\1c\\78cb8268e0260f35102584f6d19d4d9c372b64",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\1c\\d92e44a3bfe99174d37b79fbb3e7f7a3ea7004",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\1d\\4696c52dc3acf27f9c7910194e00f68835b759",
     "language": "unknown",
     "issues": [],
@@ -994,6 +1066,12 @@
   },
   {
     "file": ".\\.git\\objects\\1d\\cdf0f0a0ddeb09fa59ca4336b44d297fad1179",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\1f\\a1aa3dc84273ca7eac7c6542245ffca978d003",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1047,6 +1125,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\2d\\8ca1c261f8e37408159b80dfdba7fda86efeee",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\2e\\0a373212bb5eb61ffd25f6bf7f3edd90c0fa68",
     "language": "unknown",
     "issues": [],
@@ -1065,7 +1149,19 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\35\\3ddb37dd02b6facd21f7f047ebe04c14485ba6",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\37\\e5c5b892be4607f95cdfc43abada6570b20e91",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\38\\8f9c348dd2ebfae52dce76c2c03074a10520dd",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1089,6 +1185,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\41\\c6c89c354e220c57650ac260aa77b25305cd90",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\47\\d2bd8733a6047e7a902b7401edb6c325864a59",
     "language": "unknown",
     "issues": [],
@@ -1101,7 +1203,25 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\48\\1511a591e14afcd47d8bd1cf3f50a3a57e0fc8",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\49\\6b0177e9f8adf6220e0d5f9dedf61d4869d8b9",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\4d\\55f1d39c47fb78dc3c259be2010653dab65feb",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\4d\\63ed96c4622772b7b5066ae62b72008817b405",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1131,6 +1251,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\52\\0582fa51ea525a4ef3de4a640fbcdf7469829c",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\52\\0946fb23fb44c56210d36ff9535aaab27bda8b",
     "language": "unknown",
     "issues": [],
@@ -1149,7 +1275,19 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\55\\b1dfe179dfe33457a3500786b70b5d015f759f",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\55\\f99e87a9439bb1cd3f2f5ea07c519561c170ed",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\56\\3d61033c649427688cf0a164428110369dcaac",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1168,6 +1306,12 @@
   },
   {
     "file": ".\\.git\\objects\\59\\24d5a4c4e8579df7d2aaac22676adca4e1f54c",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\5d\\1f71e0ef41dc2adae882e522378d4a77524c13",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1203,13 +1347,31 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\67\\bf0d9a4b73f610e35fba3a1abefae6c23fc6f3",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\69\\2351641824e27ec5a882122b90d708fdb156b0",
     "language": "unknown",
     "issues": [],
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\69\\b3ba934fb9485e42539ff4561a8288db9dadce",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\6a\\bb8469de50c41698f5f653c18a24bcd744fa26",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\6a\\eadbb74e15ac14066c52344a1b900299a6f427",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1222,6 +1384,12 @@
   },
   {
     "file": ".\\.git\\objects\\6f\\36c6a39ecfb8ec339d6496f6854ba760e6bc8f",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\71\\37789357b352088ef42ace4c1624d5b0ef130d",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1299,6 +1467,18 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\82\\1f8c1f82e1b62cbe2d0df0def1a682f4a95fe9",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\86\\ad0f392775f44d96231c3b0779078d2bdcfd38",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\87\\0ca46593d4e9217bb7b8d4b18cdcea62792c7e",
     "language": "unknown",
     "issues": [],
@@ -1306,6 +1486,12 @@
   },
   {
     "file": ".\\.git\\objects\\87\\5d600bab24c4d3a67e9b046121a363ce779d28",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\87\\7190db1383f1a9a32de577a41bc8faeeb8d69a",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1329,13 +1515,49 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\8b\\137891791fe96927ad78e64b0aad7bded08bdc",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\8b\\9f30b1bdf597f63d24709e68d11631e58d94b7",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\8c\\61bfcd22a61c5bf195a0dc3022c3cb9044bdbc",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\8c\\acf10b65557af0d616db6091a53b8c99854730",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\8d\\26e1ccec11be82ace2be71b7143f241207b14e",
     "language": "unknown",
     "issues": [],
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\8f\\2e75597d69fa90208eef52dbe9fd36843e4173",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\93\\3410feddca96e9a1b00932adff05376fb15cab",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\94\\2a1893cf96d09429595fcf2134afcc74398249",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1360,6 +1582,12 @@
   },
   {
     "file": ".\\.git\\objects\\9d\\f797b5ad032abd01a7915f574bd6a5153accee",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\a1\\41ef0cc8d5373204d87d7f29be5e1526562481",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1401,7 +1629,31 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\aa\\c7ce9c055d78eaacf1b172e5a62b792e2a0a18",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\ab\\5c6de8bb749c6e9965b4100e44d07c6f88482c",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\ae\\cc52be9fadcb42b945ee631e7bd8e0d0ffe17b",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\af\\865a921bfd3294d85d530c352d7f26dfcf293f",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\b4\\88012d58a4c5c5b047e291221f4b5f18af6c24",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1503,6 +1755,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\d8\\9816a00a6c7012e12d5691518cc7347243df66",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\d8\\d6444ba746e7653690c47502bd1e2cf71b600f",
     "language": "unknown",
     "issues": [],
@@ -1528,6 +1786,12 @@
   },
   {
     "file": ".\\.git\\objects\\dc\\8bc12e4888737b43a5a904310ae6253dc42f68",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\dc\\8feacb9cdead9240671ccd6250a18905e18366",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1575,6 +1839,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\e6\\9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\e7\\eb883a8762941c28b167ecd2acd9f4a07c4932",
     "language": "unknown",
     "issues": [],
@@ -1587,6 +1857,12 @@
     "complexity": 0
   },
   {
+    "file": ".\\.git\\objects\\ec\\2321fe147c775bab237721b084ba577c333582",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
     "file": ".\\.git\\objects\\ee\\da7cba6c1345c532e5a2e6914b561d291e2c1f",
     "language": "unknown",
     "issues": [],
@@ -1594,6 +1870,12 @@
   },
   {
     "file": ".\\.git\\objects\\ef\\36f05936025a9f710d8c0a0bf7924e6dd8a0a3",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\f3\\26d1155cfb6cdf15c432d6d5254809b46ec6ed",
     "language": "unknown",
     "issues": [],
     "complexity": 0
@@ -1624,6 +1906,12 @@
   },
   {
     "file": ".\\.git\\objects\\fc\\0c958c476fdc08642dacb05c9915205a248c7e",
+    "language": "unknown",
+    "issues": [],
+    "complexity": 0
+  },
+  {
+    "file": ".\\.git\\objects\\fc\\49b5a705f6265002a6878faf775573dcd19a7a",
     "language": "unknown",
     "issues": [],
     "complexity": 0
