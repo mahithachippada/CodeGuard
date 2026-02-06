@@ -1,4 +1,3 @@
 def add(a, b):
-    """Adding two numbers two numbers"""
+    """Adding the items"""
     return a + b
-    
