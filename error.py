@@ -1,5 +1,3 @@
-# TODO: Fix this function later
-API_TOKEN = "12345-plaintext-token"   # Hardcoded secret
 PASSWORD = "supersecret"              # Insecure password
 
 def add_numbers(a, b):
