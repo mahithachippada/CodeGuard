@@ -1,5 +1,6 @@
 """Example module demonstrating clean code practices."""
 
+
 def add_numbers(a, b):
     """
     Add two numbers together.
