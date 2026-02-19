@@ -21,6 +21,16 @@ The project includes a **Streamlit frontend** for interactive demos and a **pre�
 ```
 .github/           → GitHub Actions workflows (CI/CD automation)
 .gitlab/           → GitLab CI/CD config (optional cross-platform automation)
+assets/            → Static resources (architecture & screenshots)
+    ├── architecture.jpeg
+    └── screenshots/
+        ├── op1.jpeg
+        ├── op2.jpeg
+        ├── op3.jpeg
+        ├── op4.jpeg
+        ├── op5.jpeg
+        ├── op6.jpeg
+        └── op7.jpeg
 analyzers/         → Language-specific analyzers
     ├── c_analyzer.py
     ├── cpp_analyzer.py
