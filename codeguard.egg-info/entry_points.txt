@@ -1,2 +1,0 @@
-[console_scripts]
-codeguard = codeguard.__main__:main

@@ -1,46 +1,21 @@
 import os
+from codeguard.analyzer import analyze_python_file, analyze_js_file
 
-from analyzers.python_analyzer import analyze_python
-from analyzers.javascript_analyzer import analyze_javascript
-from analyzers.java_analyzer import analyze_java
-from analyzers.c_analyzer import analyze_c
-from analyzers.cpp_analyzer import analyze_cpp
-
-
-def detect_language(file_path):
-    ext = os.path.splitext(file_path)[1]
-
-    if ext == ".py":
-        return "python"
-    if ext == ".js":
-        return "javascript"
-    if ext == ".java":
-        return "java"
-    if ext == ".c":
-        return "c"
-    if ext in [".cpp", ".cc", ".cxx"]:
-        return "cpp"
-
-    return "unknown"
-
-
-def analyze_file(file_path):
-    language = detect_language(file_path)
-
-    if language == "python":
-        return analyze_python(file_path)
-    elif language == "javascript":
-        return analyze_javascript(file_path)
-    elif language == "java":
-        return analyze_java(file_path)
-    elif language == "c":
-        return analyze_c(file_path)
-    elif language == "cpp":
-        return analyze_cpp(file_path)
+def analyze_file(path):
+    static_results = []
+    if os.path.isfile(path):
+        files_to_check = [path]
     else:
-        return {
-            "file": file_path,
-            "language": "unknown",
-            "issues": [],
-            "complexity": 0
-        }
+        files_to_check = []
+        for root, _, files in os.walk(path):
+            for fname in files:
+                if fname.endswith((".py", ".js")):
+                    files_to_check.append(os.path.join(root, fname))
+
+    for file_path in files_to_check:
+        if file_path.endswith(".py"):
+            static_results.append(analyze_python_file(file_path))
+        elif file_path.endswith(".js"):
+            static_results.append(analyze_js_file(file_path))
+
+    return static_results

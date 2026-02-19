@@ -1,54 +1,28 @@
 import json
-from collections import defaultdict
 import os
-import streamlit
+import requests
+from collections import defaultdict
+
 # ------------------------------------------
 # KNOWLEDGE BASE (Fallback Templates)
 # ------------------------------------------
 ISSUE_KB = {
-    "hardcoded secret": {
-        "review": "Sensitive credentials are hardcoded directly in the source code.",
-        "suggestion": "Remove hardcoded credentials and use environment variables or a secret manager.",
-        "auto_fix": False
-    },
-    "eval": {
-        "review": "Use of eval()/exec() allows execution of arbitrary code at runtime.",
-        "suggestion": "Avoid eval()/exec(). Use safer alternatives such as explicit function calls.",
-        "auto_fix": False
-    },
-    "missing docstring": {
-        "review": "This function does not contain a docstring.",
-        "suggestion": "Add a docstring explaining the purpose, parameters, and return value.",
+    "documentation": {
+        "category": "Documentation",
+        "review": "This code is missing proper documentation.",
+        "suggestion": "Add docstrings and comments to explain functionality.",
         "auto_fix": True
     },
-    "type hint": {
-        "review": "The function lacks type annotations.",
-        "suggestion": "Add appropriate type hints to parameters and return values.",
+    "style": {
+        "category": "Style",
+        "review": "Code style does not follow conventions.",
+        "suggestion": "Fix spacing, naming, and line length issues.",
         "auto_fix": False
     },
-    "complexity": {
-        "review": "The code has high cyclomatic complexity.",
-        "suggestion": "Refactor into smaller, simpler functions.",
-        "auto_fix": False
-    },
-    "naming": {
-        "review": "Naming convention does not follow style guidelines.",
-        "suggestion": "Rename identifiers to follow language-specific conventions.",
-        "auto_fix": False
-    },
-    "debug": {
-        "review": "Debug/logging statements found in code.",
-        "suggestion": "Remove debug prints/logs before deploying.",
-        "auto_fix": True
-    },
-    "memory": {
-        "review": "Possible memory leak due to improper memory management.",
-        "suggestion": "Ensure all allocated memory is properly released.",
-        "auto_fix": False
-    },
-    "buffer overflow": {
-        "review": "Unsafe functions may cause buffer overflow vulnerabilities.",
-        "suggestion": "Replace unsafe functions with safer alternatives and validate input sizes.",
+    "security": {
+        "category": "Security",
+        "review": "Potential security issue detected.",
+        "suggestion": "Avoid hardcoded secrets, eval/exec, and unsafe functions.",
         "auto_fix": False
     }
 }
@@ -56,94 +30,118 @@ ISSUE_KB = {
 # ------------------------------------------
 # CLASSIFICATION LOGIC
 # ------------------------------------------
-def classify_issue(issue_text: str):
-    text = issue_text.lower()
-    if any(k in text for k in ["password", "secret", "token", "api key", "apikey"]):
-        return "hardcoded secret"
-    if "eval" in text or "exec" in text:
-        return "eval"
-    if "docstring" in text:
-        return "missing docstring"
-    if "type" in text:
-        return "type hint"
-    if "complexity" in text:
-        return "complexity"
-    if "class" in text or "naming" in text:
-        return "naming"
-    if "console.log" in text or "debug" in text or "print" in text:
-        return "debug"
-    if "malloc" in text or "free" in text or "memory" in text:
-        return "memory"
-    if "strcpy" in text or "gets" in text:
-        return "buffer overflow"
-    return "unknown"
+def classify_issue(category: str):
+    text = category.lower()
+    if "doc" in text:
+        return "documentation"
+    if "style" in text:
+        return "style"
+    if "security" in text:
+        return "security"
+    return "general"
 
 # ------------------------------------------
-# OPTIONAL LLM INTEGRATION
+# OLLAMA INTEGRATION
 # ------------------------------------------
-def llm_generate_suggestion(issue_text, code_snippet=None):
-    """
-    Replace this stub with actual LLM API call (e.g., OpenAI, Azure OpenAI).
-    For now, it simulates dynamic suggestions.
-    """
-    return {
-        "review": f"LLM suggests: {issue_text} may reduce code quality.",
-        "suggestion": f"LLM recommends refactoring or fixing: {issue_text}.",
-        "auto_fix_recommended": False
-    }
+def ollama_generate(issue_text, code_snippet=None, model="phi3"):
+    prompt = f"""
+You are a code reviewer. First, explain the issue clearly for humans.
+Issue: {issue_text}
+
+Then output the corrected code, wrapped in triple backticks:
+```python
+{code_snippet or ''}
+
+"""
+    try:
+        response = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": model, "prompt": prompt},
+            stream=True
+        )
+        response.raise_for_status()
+
+        output = ""
+        for line in response.iter_lines():
+            if line:
+                try:
+                    data = json.loads(line.decode("utf-8"))
+                    output += data.get("response", "")
+                except json.JSONDecodeError:
+                    continue
+
+        return output.strip()
+    except Exception as e:
+        return f"[Ollama error: {e}]"
 
 # ------------------------------------------
 # MAIN REVIEW FUNCTION
 # ------------------------------------------
-def generate_ai_review(static_results, use_llm=False):
+def generate_ai_review(static_results, use_llm=True, model="phi3"):
     final_output = []
 
     for file_result in static_results:
+        if not isinstance(file_result, dict):
+            continue
+
+        issues = file_result.get("issues", [])
         grouped_issues = defaultdict(list)
-        for issue in file_result["issues"]:
-            grouped_issues[issue["issue"]].append(issue)
+
+        for issue in issues:
+            if isinstance(issue, dict):
+                issue_type = issue.get("category", "unknown")
+                grouped_issues[issue_type].append(issue)
+            else:
+                grouped_issues[str(issue)].append({"severity": "INFO", "category": str(issue)})
 
         reviews = []
         for issue_text, occurrences in grouped_issues.items():
             key = classify_issue(issue_text)
             template = ISSUE_KB.get(key)
 
-            if use_llm:
-                # Try LLM first
-                llm_response = llm_generate_suggestion(issue_text)
-                if llm_response:
-                    reviews.append({
-                        "type": issue_text,
-                        "severity": occurrences[0]["severity"],
-                        "review": llm_response["review"],
-                        "suggestion": llm_response["suggestion"],
-                        "auto_fix_recommended": llm_response["auto_fix_recommended"],
-                        "occurrences": len(occurrences)
-                    })
-                    continue  # skip fallback if LLM worked
+            review_entry = {
+                "type": issue_text,
+                "severity": occurrences[0].get("severity", "INFO"),
+                "occurrences": len(occurrences),
+                "line": occurrences[0].get("line"),
+                "code": occurrences[0].get("code"),
+                "category": issue_text
+            }
 
-            # Fallback to template
-            if template:
-                reviews.append({
-                    "type": issue_text,
-                    "severity": occurrences[0]["severity"],
-                    "review": template["review"],
-                    "suggestion": template["suggestion"],
-                    "auto_fix_recommended": template["auto_fix"],
-                    "occurrences": len(occurrences)
+            if use_llm:
+                code_snippet = occurrences[0].get("code", None)
+                llm_response = ollama_generate(issue_text, code_snippet, model=model)
+
+                # Split explanation and code
+                explanation, code_fix = llm_response, None
+                if "```" in llm_response:
+                    parts = llm_response.split("```")
+                    explanation = parts[0].strip()
+                    code_fix = parts[1].replace("python", "").replace("```", "").strip()
+
+                review_entry.update({
+                    "review": f"Issue: {issue_text}\n{explanation}",   # human explanation
+                    "suggestion": code_fix or (template["suggestion"] if template else "Review code and apply best practices."),  # code only
+                    "auto_fix_recommended": template["auto_fix"] if template else False
                 })
             else:
-                reviews.append({
-                    "type": issue_text,
-                    "severity": occurrences[0]["severity"],
-                    "review": "Issue detected that may affect quality or security.",
-                    "suggestion": "Review code and apply best practices.",
-                    "auto_fix_recommended": False,
-                    "occurrences": len(occurrences)
-                })
+                if template:
+                    review_entry.update({
+                        "review": f"Issue: {issue_text}\nWhy: {template['review']}",
+                        "suggestion": f"Fix: {template['suggestion']}",
+                        "auto_fix_recommended": template["auto_fix"]
+                    })
+                else:
+                    review_entry.update({
+                        "review": f"Issue: {issue_text}\nWhy: Generic issue detected.",
+                        "suggestion": "Fix: Review code and apply best practices.",
+                        "auto_fix_recommended": False
+                    })
+
+            reviews.append(review_entry)
 
         final_output.append({
-            "file": file_result["file"],
+            "file": file_result.get("file", "unknown"),
             "reviews": reviews
         })
 
@@ -156,7 +154,7 @@ def log_feedback(file, issue_type, decision, log_file="feedback_log.json"):
     feedback_entry = {
         "file": file,
         "issue": issue_type,
-        "decision": decision  # "accepted" or "rejected"
+        "decision": decision
     }
 
     try:
@@ -172,3 +170,21 @@ def log_feedback(file, issue_type, decision, log_file="feedback_log.json"):
             json.dump(data, f, indent=2)
     except Exception as e:
         print(f"[ERROR] Could not log feedback: {e}")
+
+# ------------------------------------------
+# DEMO RUNNER
+# ------------------------------------------
+if __name__ == "__main__":
+    static_results = [
+        {
+            "file": "example.py",
+            "issues": [
+                {"severity": "ERROR", "category": "Documentation", "line": 5, "code": "def add(a,b): return a+b"},
+                {"severity": "WARNING", "category": "Style", "line": 10, "code": "print('debug')"},
+                {"severity": "ERROR", "category": "Security", "line": 15, "code": "API_KEY = '12345'"}
+            ]
+        }
+    ]
+
+    results = generate_ai_review(static_results, use_llm=True, model="phi3")
+    print(json.dumps(results, indent=2))

@@ -1,107 +1,112 @@
-import argparse
-import os
-import sys
+import click
 import json
-
-from codeguard.dispatcher import analyze_file
+import os
+from codeguard.module1 import analyze_file
 from codeguard.module2 import generate_ai_review
 from codeguard.module3 import compute_metrics
 
-
-SEVERITY_ORDER = {"CRITICAL": 3, "WARNING": 2, "INFO": 1}
-
-def load_config():
-    config = {"severity_threshold": "WARNING", "exclude_paths": []}
-    try:
-        import tomllib
-    except ModuleNotFoundError:
-        import tomli as tomllib
-    if os.path.exists("pyproject.toml"):
-        with open("pyproject.toml", "rb") as f:
-            data = tomllib.load(f)
-            config.update(data.get("tool", {}).get("codeguard", {}))
-    return config
-
-def should_block(results, threshold):
-    for file in results:
-        for issue in file["issues"]:
-            if SEVERITY_ORDER[issue["severity"]] >= SEVERITY_ORDER[threshold]:
-                return True
-    return False
-
-def run_scan(config, target):
-    results = []
-    for root, dirs, files in os.walk(target):
-        if any(ex in root for ex in config.get("exclude_paths", [])):
-            continue
-        for f in files:
-            results.append(analyze_file(os.path.join(root, f)))
-
-    with open("module1_report.json", "w", encoding="utf-8") as out:
-        json.dump(results, out, indent=2)
-
-    # Always save last_results.json
-    with open("last_results.json", "w", encoding="utf-8") as out:
-        json.dump(results, out, indent=2)
-
-    if should_block(results, config["severity_threshold"]):
-        print("[ERROR] Quality gate failed")
-        sys.exit(1)
-
-    print("[OK] Scan passed")
-    return results
-
-
-def run_review(results, use_llm=False):
-    ai_reviews = generate_ai_review(results, use_llm=use_llm)
-    with open("ai_review.json", "w", encoding="utf-8") as out:
-        json.dump(ai_reviews, out, indent=2)
-    print("[OK] AI Review completed")
-    return ai_reviews
-
-def run_report(results):
-    metrics = compute_metrics(results)
-    with open("module3_metrics.json", "w", encoding="utf-8") as out:
-        json.dump(metrics, out, indent=2)
-    print("[OK] Metrics computed")
-    return metrics
-
+@click.group()
 def main():
-    parser = argparse.ArgumentParser(prog="codeguard")
-    subparsers = parser.add_subparsers(dest="command")
+    """CodeGuard CLI - AI-Powered Multi-Language Code Review Tool"""
+    pass
 
-    scan_parser = subparsers.add_parser("scan")
-    scan_parser.add_argument("path", nargs="?", default=".")
+# -------------------------------
+# Command: scan
+# -------------------------------
+@main.command()
+@click.argument("path", type=click.Path(exists=True))
+def scan(path):
+    """Scan files for issues."""
+    results = analyze_file(path)
+    click.echo(json.dumps(results, indent=2))
 
-    review_parser = subparsers.add_parser("review")
-    review_parser.add_argument("--llm", action="store_true")
+# -------------------------------
+# Command: review
+# -------------------------------
+@main.command()
+@click.argument("path", type=click.Path(exists=True))
+def review(path):
+    """AI-powered review using Ollama."""
+    static_results = [{"file": path, "issues": analyze_file(path)}]
+    ai_results = generate_ai_review(static_results, use_llm=True)
+    click.echo(json.dumps(ai_results, indent=2))
 
-    subparsers.add_parser("report")
+# -------------------------------
+# Command: apply
+# -------------------------------
+import os
+import json
+import click
+from codeguard.module1 import analyze_file
+from codeguard.module2 import generate_ai_review
 
-    args = parser.parse_args()
-    config = load_config()
-    print("Configuration loaded:", config)
+@main.command()
+@click.argument("path", type=click.Path(exists=True))
+def apply(path):
+    """Auto-fix code using AI suggestions + Black."""
 
-    if args.command == "scan":
-        results = run_scan(config, args.path)
-        with open("last_results.json", "w", encoding="utf-8") as out:
-            json.dump(results, out, indent=2)
-    elif args.command == "review":
-        if not os.path.exists("last_results.json"):
-            print("⚠️ Run scan first")
-            sys.exit(1)
-        with open("last_results.json", "r", encoding="utf-8") as f:
-            results = json.load(f)
-        run_review(results, use_llm=args.llm)
-    elif args.command == "report":
-        if not os.path.exists("last_results.json"):
-            print("⚠️ Run scan first")
-            sys.exit(1)
-        with open("last_results.json", "r", encoding="utf-8") as f:
-            results = json.load(f)
-        run_report(results)
+    # Step 1: Run static analysis
+    static_results = [{"file": path, "issues": analyze_file(path)}]
+
+    # Step 2: Get AI review suggestions
+    ai_results = generate_ai_review(static_results, use_llm=True)
+
+    applied = False
+
+    # Step 3: Apply AI fixes (only corrected code, not explanation)
+    for review in ai_results[0]["reviews"]:
+        suggestion = review.get("suggestion")
+        if suggestion:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(suggestion)   # only corrected code
+            click.echo(f"[APPLY] Applied AI fix for issue type: {review['type']}")
+            applied = True
+
+    # Step 4: Always run Black afterwards
+    if path.endswith(".py"):
+        os.system(f"black {path}")
+        click.echo("[APPLY] Auto-fix complete (AI + Black).")
     else:
-        parser.print_help()
+        click.echo("[APPLY] Only Python files are supported for auto-fix right now.")
+
+    if not applied:
+        click.echo("[APPLY] No AI fix applied (suggestion was not code).")
+
+
+
+# -------------------------------
+# Command: report
+# -------------------------------
+@main.command()
+@click.argument("path", type=click.Path(exists=True))
+def report(path):
+    """Generate metrics report."""
+    static_results = [{"file": path, "issues": analyze_file(path)}]
+    metrics = compute_metrics(static_results)
+
+    click.echo("\n=== File Metrics ===")
+    click.echo(json.dumps(metrics["files"], indent=2))
+
+    click.echo("\n=== Project Summary ===")
+    click.echo(json.dumps(metrics["summary"], indent=2))
+
+# -------------------------------
+# Command: diff
+# -------------------------------
+@main.command()
+@click.argument("file1", type=click.Path(exists=True))
+@click.argument("file2", type=click.Path(exists=True))
+def diff(file1, file2):
+    """Compare two files line by line."""
+    with open(file1, encoding="utf-8", errors="ignore") as f1, open(file2, encoding="utf-8", errors="ignore") as f2:
+        lines1 = f1.readlines()
+        lines2 = f2.readlines()
+
+    click.echo(f"--- {file1}")
+    click.echo(f"+++ {file2}")
+    for i, (l1, l2) in enumerate(zip(lines1, lines2), start=1):
+        if l1 != l2:
+            click.echo(f"Line {i}:\n- {l1.strip()}\n+ {l2.strip()}")
 
 if __name__ == "__main__":
     main()

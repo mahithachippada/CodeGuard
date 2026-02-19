@@ -1,3 +1,4 @@
+import os
 import ast
 
 class ComplexityVisitor(ast.NodeVisitor):
@@ -7,7 +8,6 @@ class ComplexityVisitor(ast.NodeVisitor):
         self.current_depth = 0
 
     def generic_visit(self, node):
-        # Track nesting depth
         self.current_depth += 1
         self.max_depth = max(self.max_depth, self.current_depth)
         super().generic_visit(node)
@@ -41,22 +41,12 @@ def analyze_python(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             code = f.read()
     except Exception:
-        return {
-            "file": file_path,
-            "language": "python",
-            "issues": [{"issue": "Unable to read file", "severity": "CRITICAL"}],
-            "complexity": 0
-        }
+        return [{"issue": "Unable to read file", "severity": "CRITICAL", "category": "io"}]
 
     try:
         tree = ast.parse(code)
     except SyntaxError as e:
-        return {
-            "file": file_path,
-            "language": "python",
-            "issues": [{"issue": f"Syntax error: {e}", "severity": "CRITICAL"}],
-            "complexity": 0
-        }
+        return [{"issue": f"Syntax error: {e}", "severity": "CRITICAL", "category": "syntax"}]
 
     visitor = ComplexityVisitor()
     visitor.visit(tree)
@@ -123,10 +113,13 @@ def analyze_python(file_path):
             "category": "security"
         })
 
-    return {
-        "file": file_path,
-        "language": "python",
-        "issues": issues,
-        "complexity": complexity,
-        "nesting_depth": visitor.max_depth
-    }
+    return issues
+
+
+def analyze_file(file_path):
+    """Wrapper that dispatches to the right analyzer based on file extension."""
+    ext = os.path.splitext(file_path)[1].lower()
+    if ext == ".py":
+        return analyze_python(file_path)
+    else:
+        return [{"issue": "Language not supported yet", "severity": "INFO", "category": "general"}]
