@@ -31,6 +31,8 @@ assets/            → Static resources (architecture & screenshots)
         ├── op5.jpeg
         ├── op6.jpeg
         └── op7.jpeg
+presentation/      → Project presentation slides
+    └── CodeGuard ppt
 analyzers/         → Language-specific analyzers
     ├── c_analyzer.py
     ├── cpp_analyzer.py
