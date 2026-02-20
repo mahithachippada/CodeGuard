@@ -113,7 +113,7 @@ The diagram below shows the detailed architecture of CodeGuard, including:
 - Pre-commit blocking logic
 
 <p align="center">
-  <img src="assets/architecture.jpeg" width="800">
+  <img src="assets/CodeGuard Architecture.jpeg" width="800">
 </p>
 
 
