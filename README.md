@@ -33,6 +33,7 @@ assets/            → Static resources (architecture & screenshots)
         └── op7.jpeg
 presentation/      → Project presentation slides
     └── CodeGuard ppt
+    └── Documentation.docx
 analyzers/         → Language-specific analyzers
     ├── c_analyzer.py
     ├── cpp_analyzer.py
