@@ -1,0 +1,29 @@
+#!/bin/bash
+# Pre-commit hook for CodeGuard
+
+# Get staged Python files (recursively)
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.py$')
+
+if [ -n "$FILES" ]; then
+  echo "Running CodeGuard scan on staged Python files..."
+  for f in $FILES; do
+    if [ -f "$f" ]; then
+      OUTPUT=$(codeguard scan "$f")
+      echo "$OUTPUT"
+
+      # Block commit if CRITICAL or ERROR issues are found
+      if echo "$OUTPUT" | grep -q '"severity": "CRITICAL"' || echo "$OUTPUT" | grep -q '"severity": "ERROR"'; then
+        echo "❌ Commit blocked: CodeGuard found CRITICAL/ERROR issues in $f"
+        exit 1
+      fi
+
+      # Warn if INFO or WARNING issues are found
+      if echo "$OUTPUT" | grep -q '"severity": "INFO"' || echo "$OUTPUT" | grep -q '"severity": "WARNING"'; then
+        echo "⚠️ Commit warning: CodeGuard found INFO/WARNING issues in $f"
+      fi
+    fi
+  done
+fi
+
+echo "✅ Commit passed CodeGuard checks"
+exit 0
